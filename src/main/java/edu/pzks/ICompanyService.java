@@ -12,6 +12,7 @@ package edu.pzks;
 import java.util.List;
 
 public interface ICompanyService {
+
     /**
      * @param child - company for whom we are searching the top level parent
      *                  (parent of parent of ...)

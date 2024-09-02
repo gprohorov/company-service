@@ -10,7 +10,8 @@ package edu.pzks;
 */
 
 public class Company {
-    // parent for this company nullable, when there is no parent for this company
+    // parent for this company nullable, when there is no parent for this
+    // company
     private Company parent;
     private long employeesCount;
 

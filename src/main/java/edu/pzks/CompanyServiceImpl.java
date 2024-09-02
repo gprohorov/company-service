@@ -26,19 +26,19 @@ public class CompanyServiceImpl implements ICompanyService {
 
     private Set<Company> getAllChildrenAndCompanyToSet (Company company, List<Company> companies){
         Set<Company> children = new HashSet<>();
-        Set<Company> chld = new HashSet<>();
+        Set<Company> set = new HashSet<>();
         for(Company cmp:companies){
             while (true){
-                chld.add(cmp);
+                set.add(cmp);
                 if ( cmp.getParent() == null || cmp.equals(company)){
                     break;
                 }
                 cmp=cmp.getParent();
             }
-            if (chld.contains(company)) {
-                children.addAll(chld);
+            if (set.contains(company)) {
+                children.addAll(set);
             }
-            chld.clear();
+            set.clear();
         }
         return children;
     }
